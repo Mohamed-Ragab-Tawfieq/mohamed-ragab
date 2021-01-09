@@ -1,0 +1,4 @@
+Sitemap: https://mohamed-ragab.netlify.com/sitemap.xml
+User-Agent: *
+Disallow: 
+Allow: /index.html

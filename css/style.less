@@ -1,0 +1,294 @@
+@a: #d2e0fb;
+@b: #2d4571;
+@c: #152c55;
+@d: #051838;
+@e: #021027;
+@border: 3px solid #7688a9;
+.btn {
+  color: @d;
+  background: transparent;
+  font-weight: 500;
+  border: 1px solid @a;
+}
+h2 {
+  font-size: 1.2em;
+}
+body {
+  font-family: "Changa", sans-serif;
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  position: relative;
+}
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+.english {
+  font-family: "Manjari", sans-serif;
+}
+.row {
+  margin: 0;
+}
+.slide {
+  margin-right: -200px;
+}
+
+//----------header-------------
+.navbar {
+  background: @e;
+}
+li {
+  a {
+    border-bottom: 2px solid transparent;
+    color: @a !important;
+    &:hover {
+      border-bottom: 2px solid @b;
+    }
+  }
+}
+
+//-------home------
+.home {
+  height: 90vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/home.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  a {
+    border: 2px solid @d;
+    background: @d;
+    color: @a;
+    &:hover {
+      color: @a;
+    }
+  }
+  .typewriter {
+    color: @a;
+  }
+  /* Cursor Styling */
+  .cursor::after {
+    content: "";
+    display: inline-block;
+    margin-right: 3px;
+    background-color: @a;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+  }
+  h1.cursor::after {
+    height: 30px;
+    width: 5px;
+  }
+  p.cursor::after {
+    height: 13px;
+    width: 6px;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    49% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+//-------services------
+.services-title {
+  background: @d;
+  color: @a;
+  .frame {
+    background-image: url("/images/frame-services.png");
+    background-size: 100% 100%;
+  }
+}
+.services-body {
+  border-bottom: @border;
+  background: @d;
+  color: @a;
+}
+
+//-------body-image---------
+.body-image {
+  height: 90vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/home2.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  h1 {
+    font-size: 1.2em;
+    color: @a;
+    background: rgba(5, 24, 56, 0.7);
+  }
+}
+
+//-------skills---------
+.skills-title {
+  background: @b;
+  color: @a;
+  .frame {
+    background-image: url("/images/frame-skills.png");
+    background-size: 100% 100%;
+  }
+}
+.skills-body {
+  background: @b;
+  color: @d;
+  border-bottom: 3px solid @d;
+  .progress-bar {
+    background: @c;
+  }
+  .english {
+    color: @a;
+  }
+}
+
+//-----------my works-------
+.works-title {
+  background: @c;
+  color: @a;
+  .frame {
+    background-image: url("/images/frame-works.png");
+    background-size: 100% 100%;
+  }
+}
+.works-body {
+  background: @c;
+  border-bottom: @border;
+  .overlay {
+    position: relative;
+    .works-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: 0.5s ease;
+      backface-visibility: hidden;
+    }
+    .middle {
+      transition: 0.5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    &:hover .works-image {
+      opacity: 0.3;
+    }
+    &:hover .middle {
+      opacity: 1;
+    }
+    a {
+      background-color: @d;
+      color: @a;
+      border: 1px solid @a;
+      padding: 16px 32px;
+    }
+  }
+}
+
+//-----------about----------
+.about-title {
+  background: @b;
+  color: @a;
+  .frame {
+    background-image: url("/images/frame-skills.png");
+    background-size: 100% 100%;
+  }
+}
+.about-body {
+  background: @b;
+  border-bottom: @border;
+  color: @a;
+  i {
+    color: @d;
+  }
+  img {
+    border: 4px solid @c;
+    border-radius: 50%;
+  }
+}
+
+//---------contact--------
+.contact-title {
+  background: @c;
+  color: @a;
+  .frame {
+    background-image: url("/images/frame-works.png");
+    background-size: 100% 100%;
+  }
+}
+.contact-body {
+  border-bottom: 3px solid @b;
+  background: @c;
+  .container {
+    background: @d;
+    width: 60%;
+    input,
+    textarea {
+      background: @a;
+      color: @d;
+    }
+    ::placeholder {
+      color: @d;
+    }
+    .warning {
+      color: @a;
+      float: right;
+    }
+  }
+  button {
+    background: @c;
+    border: 1px solid @a;
+    color: @d;
+    &:hover {
+      background: @d;
+      color: @a;
+      border: 1px solid @b;
+    }
+  }
+}
+
+//---------footer---------
+.footer {
+  background: @d;
+  color: @b;
+  p {
+    color: @b;
+  }
+  span {
+    background: @b;
+    padding: 10px;
+    color: @d;
+    border-radius: 20%;
+    &:hover {
+      background: @b;
+      color: @a;
+      transform: scale(1.2, 1.2);
+    }
+  }
+  .go-top {
+    background: @c;
+    color: @d;
+    padding: 5px;
+    opacity: 0;
+    cursor: pointer;
+    &:hover {
+      background: @b;
+      color: @d;
+      transform: none;
+    }
+  }
+}
