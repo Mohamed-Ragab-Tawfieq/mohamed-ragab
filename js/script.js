@@ -120,7 +120,7 @@ $(document).ready(function() {
   var scrollTop = $(".go-top");
   $(window).scroll(function() {
     var topPos = $(this).scrollTop();
-    if (topPos > 1000) {
+    if (topPos > 0) {
       $(scrollTop).css("opacity", "1");
     } else {
       $(scrollTop).css("opacity", "0");
