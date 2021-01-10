@@ -120,10 +120,12 @@ $(document).ready(function() {
   var scrollTop = $(".go-top");
   $(window).scroll(function() {
     var topPos = $(this).scrollTop();
-    if (topPos > 0) {
-      $(scrollTop).css("opacity", "1");
-    } else {
+    if (topPos == 0) {
+      $(scrollTop).css('margin-bottom', -200);
       $(scrollTop).css("opacity", "0");
+    } else {
+      $(scrollTop).animate({'margin-bottom': 0}, 500);
+      $(scrollTop).css("opacity", "1");
     }
   });
   $(scrollTop).click(function() {

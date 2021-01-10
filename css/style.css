@@ -63,7 +63,7 @@ li a:hover {
   content: "";
   display: inline-block;
   margin-right: 3px;
-  background-color: #162e5c;
+  background-color: #f8f9fc;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
@@ -94,12 +94,7 @@ li a:hover {
   background: #f2f7eb;
   color: #162e5c;
 }
-.services-title .frame {
-  background-image: url("../images/frame-services.png");
-  background-size: 100% 100%;
-}
 .services-body {
-  border-bottom: 3px solid #7688a9;
   background: #f2f7eb;
   color: #162e5c;
 }
@@ -115,52 +110,41 @@ li a:hover {
   color: #f8f9fc;
   background: rgba(5, 24, 56, 0.7);
 }
-.skills-title {
+.skills {
   background: #e9e3e4;
   color: #162e5c;
 }
-.skills-title .frame {
-  background-image: url("../images/frame-skills.png");
-  background-size: 100% 100%;
-}
-.skills-body {
-  background: #e9e3e4;
-  color: #162e5c;
-  border-bottom: 3px solid #f2f7eb;
-}
-.skills-body ul {
+.skills ul {
   width: 40%;
   margin: 10px auto;
-  padding: 5px;
 }
-.skills-body ul li {
+.skills ul li {
   text-align: center;
-  background: #f8f9fc;
+  background: #f2f7eb;
   margin: 5px;
-  border-radius: 10px;
+  padding: 10px 5px;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid #83aa8b;
+  border-left: 4px solid #83aa8b;
 }
-.skills-body .english {
+.skills .english {
   color: #162e5c;
 }
 .works-title {
   background: #f8f9fc;
   color: #162e5c;
 }
-.works-title .frame {
-  background-image: url("../images/frame-works.png");
-  background-size: 100% 100%;
-}
 .works-body {
   background: #f8f9fc;
-  border-bottom: 3px solid #7688a9;
+  padding-bottom: 50px;
 }
 .works-body .overlay {
   position: relative;
+  padding: 5px;
+  border: 2px dashed #162e5c;
 }
 .works-body .overlay .works-image {
-  display: block;
   width: 100%;
-  height: auto;
   transition: 0.5s ease;
   backface-visibility: hidden;
 }
@@ -186,23 +170,14 @@ li a:hover {
   border: 1px solid #162e5c;
   padding: 16px 32px;
 }
-.about-title {
+.about {
   background: #e9e3e4;
   color: #162e5c;
 }
-.about-title .frame {
-  background-image: url("../images/frame-skills.png");
-  background-size: 100% 100%;
-}
-.about-body {
-  background: #e9e3e4;
-  border-bottom: 3px solid #7688a9;
+.about i {
   color: #162e5c;
 }
-.about-body i {
-  color: #162e5c;
-}
-.about-body img {
+.about img {
   border: 4px solid #f8f9fc;
   border-radius: 50%;
 }
@@ -211,7 +186,6 @@ li a:hover {
   color: #162e5c;
 }
 .contact-body {
-  border-bottom: 3px solid #e9e3e4;
   background: #f8f9fc;
 }
 .contact-body .container {
@@ -259,7 +233,8 @@ li a:hover {
   padding: 5px;
   position: fixed;
   right: 20px;
-  bottom: 20px;
+  bottom: 30px;
+  margin-bottom: -100px;
   cursor: pointer;
 }
 .footer .go-top:hover {

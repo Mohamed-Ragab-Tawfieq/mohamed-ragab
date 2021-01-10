@@ -73,7 +73,7 @@ li {
     content: "";
     display: inline-block;
     margin-right: 3px;
-    background-color: @a;
+    background-color: @c;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
@@ -107,13 +107,8 @@ li {
 .services-title {
   background: @d;
   color: @a;
-  .frame {
-    background-image: url("../images/frame-services.png");
-    background-size: 100% 100%;
-  }
 }
 .services-body {
-  border-bottom: @border;
   background: @d;
   color: @a;
 }
@@ -134,27 +129,20 @@ li {
 }
 
 //-------skills---------
-.skills-title {
+.skills {
   background: @b;
   color: @a;
-  .frame {
-    background-image: url("../images/frame-skills.png");
-    background-size: 100% 100%;
-  }
-}
-.skills-body {
-  background: @b;
-  color: @a;
-  border-bottom: 3px solid @d;
   ul {
     width: 40%;
     margin: 10px auto;
-    padding: 5px;
     li{
       text-align: center;
-      background: @c;
+      background: @d;
       margin: 5px;
-      border-radius: 10px;
+      padding: 10px 5px;
+      border-radius: 0 10px 10px 0;
+      border: 1px solid #83aa8b;
+      border-left: 4px solid #83aa8b;
     }
   }
   .english {
@@ -166,20 +154,16 @@ li {
 .works-title {
   background: @c;
   color: @a;
-  .frame {
-    background-image: url("../images/frame-works.png");
-    background-size: 100% 100%;
-  }
 }
 .works-body {
   background: @c;
-  border-bottom: @border;
+  padding-bottom: 50px;
   .overlay {
     position: relative;
+    padding: 5px;
+    border: 2px dashed #162e5c;
     .works-image {
-      display: block;
       width: 100%;
-      height: auto;
       transition: 0.5s ease;
       backface-visibility: hidden;
     }
@@ -209,17 +193,8 @@ li {
 }
 
 //-----------about----------
-.about-title {
+.about {
   background: @b;
-  color: @a;
-  .frame {
-    background-image: url("../images/frame-skills.png");
-    background-size: 100% 100%;
-  }
-}
-.about-body {
-  background: @b;
-  border-bottom: @border;
   color: @a;
   i {
     color: @a;
@@ -236,7 +211,6 @@ li {
   color: @a;
 }
 .contact-body {
-  border-bottom: 3px solid @b;
   background: @c;
   .container {
     background: @d;
@@ -287,7 +261,8 @@ li {
     // opacity: 0;
     position: fixed;
     right: 20px;
-    bottom: 20px;
+    bottom: 30px;
+    margin-bottom: -100px;
     cursor: pointer;
     &:hover {
       background: @e;
