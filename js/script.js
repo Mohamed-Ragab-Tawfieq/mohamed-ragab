@@ -103,6 +103,7 @@ $(document).ready(function() {
       var bottom_of_window = $(window).scrollTop() + $(window).height();
       if (bottom_of_window > bottom_of_object) {
         $(this).animate({ "margin-right": 0 }, 500);
+        $(this).animate({ "margin-left": 0 }, 500);
       }
     });
     $(".fade").each(function() {
